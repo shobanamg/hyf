@@ -21,7 +21,7 @@
           <span class="line line3"></span>
         </div>
         <ul class="menu-items">
-          <li><a class="text-blue" href="#home">Home</a></li>
+          <li><a class="active" href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#rates">Rates</a></li>
           <li><a href="#single">Single</a></li>
@@ -32,12 +32,15 @@
             >
           </li>
         </ul>
-        <p class="logo"><span class="first"> c</span>anvas.</p>
+        <p class="logo">
+          <span class="first">c</span>anvas<span class="text-blue">.</span>
+        </p>
       </div>
     </nav>
 
     <main>
       <!-- Hero Section starts here -->
+
       <section class="hero">
         <div class="hero-info container">
           <h1>
@@ -60,6 +63,8 @@
         </div>
       </section>
 
+      <!-- Hero Section ends here -->
+
       <!-- facility Section starts here -->
 
       <section class="facilities">
@@ -73,7 +78,6 @@
               codes.
             </p>
           </div>
-
           <div class="facility">
             <div><i class="fa-solid fa-mug-hot fa-2xl text-blue"></i></div>
             <h3>Cafeteria</h3>
@@ -121,6 +125,7 @@
           </div>
         </div>
       </section>
+
       <!-- facility Section ends here -->
     </main>
 
@@ -130,36 +135,36 @@
         <div class="content-container flex-1">
           <h3>Features</h3>
           <div>
-            <a href="#">Help Center</a>
-            <a href="#">Paid with Mobile</a>
-            <a href="#">Status</a>
-            <a href="#">Contact Support</a>
+            <a href="#Help">Help Center</a>
+            <a href="#Payment">Paid with Mobile</a>
+            <a href="#Status">Status</a>
+            <a href="#Contact">Contact Support</a>
           </div>
         </div>
         <div class="content-container flex-1">
           <h3>Support</h3>
           <div>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">FAQs</a>
-            <a href="#">Support</a>
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#FAQs">FAQs</a>
+            <a href="#Support">Support</a>
           </div>
         </div>
         <div class="content-container flex-1">
           <h3>Trending</h3>
           <div>
-            <a href="#">Shop</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Blog</a>
+            <a href="#Shop">Shop</a>
+            <a href="#Portfolio">Portfolio</a>
+            <a href="#Blog">Blog</a>
           </div>
         </div>
         <div class="content-container flex-1">
           <h3>Get to know us</h3>
           <div>
-            <a href="#">Corporate</a>
-            <a href="#">Agency</a>
-            <a href="#">eCommerce</a>
-            <a href="#">personal</a>
+            <a href="#Corporate">Corporate</a>
+            <a href="#Agency">Agency</a>
+            <a href="#eCommerce">eCommerce</a>
+            <a href="#Personal">Personal</a>
           </div>
         </div>
         <div class="content-container flex-2">
@@ -170,6 +175,19 @@
         </div>
       </div>
     </footer>
+
     <!-- Footer Section ends here -->
+
+    <script>
+      //To show the active menu
+      const menus = document.querySelectorAll(".menu-items li a");
+      for (let i = 0; i < menus.length; i++) {
+        menus[i].addEventListener("click", function () {
+          let current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace("active", "");
+          this.className += "active";
+        });
+      }
+    </script>
   </body>
 </html>
